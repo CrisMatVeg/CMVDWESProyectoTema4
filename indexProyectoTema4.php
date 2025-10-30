@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto Tema 3</title>
+        <title>Proyecto Tema 4</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./webroot/css/estilos.css">
         <link rel="stylesheet" href="./webroot/css/fonts.css">
@@ -25,10 +25,7 @@
                 flex: 1;
                 margin-top: 100px;
                 margin-bottom: 20px;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 10px;
-                row-gap: 10px;
+                display: block;
                 height: 100vh;
                 justify-items: center;
                 align-content: center;
@@ -66,15 +63,15 @@
                 padding: 10px;
             }
             
-            tr td:nth-child(2){
+            #tablaEjercicios tr td:nth-child(2){
                 font-family: sans-serif;
             }
 
-            tr td:nth-child(3){
+            #tablaEjercicios tr td:nth-child(3){
                 cursor:pointer;
             }
 
-            tr td:nth-child(4){
+            #tablaEjercicios tr td:nth-child(4){
                 cursor:pointer;
             }
         </style>
@@ -89,6 +86,61 @@
 
         <main>
             <table>
+                <tr>
+                    <td></td>
+                    <td>ED</td>
+                    <td>EE</td>
+                </tr>
+                <tr>
+                    <td class="numero">S.C.C</td>
+                    <td>
+                        <a href="./mostrarcodigo/mostrarcodigoCrear.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./codigoPHP/ejercicio00.php" >
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigoCrear.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="numero">S.C.I</td>
+                    <td>
+                        <a href="./mostrarcodigo/mostrarcodigoCarga.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./codigoPHP/ejercicio00.php" >
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigoCarga.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="numero">S.B</td>
+                    <td>
+                        <a href="./mostrarcodigo/mostrarcodigoBorrar.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="./codigoPHP/ejercicio00.php" >
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigoBorrar.php" >
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <table id="tablaEjercicios">
                 <tr>
                     <td class="numero">0</td>
                     <td class="enunciado">Hola mundo y phpinfo()</td>
