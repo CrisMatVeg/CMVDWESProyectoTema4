@@ -16,7 +16,7 @@
             a i{
                 color: #020202;
             }
-            
+
             footer i{
                 color: white;
             }
@@ -62,7 +62,7 @@
                 height: 50px;
                 padding: 10px;
             }
-            
+
             #tablaEjercicios tr td:nth-child(2){
                 font-family: sans-serif;
             }
@@ -164,74 +164,84 @@
                 <tr>
                     <td class="numero">2</td>
                     <td class="enunciado">Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                    <td><a href="./codigoPHP/ejercicio01.php" >
+                    <td><a href="./codigoPHP/ejercicio02.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo01.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo02.php" >
                             <i class="fa-solid fa-code"></i>
                         </a></td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td class="numero">3</td>
-                    <td class="enunciado">Inicializar y mostrar una variable heredoc.</td>
-                    <td><a href="./codigoPHP/ejercicio02.php" >
+                    <td class="enunciado">Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
+                        control de errores.</td>
+                    <td><a href="./codigoPHP/ejercicio03.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo02.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo03.php" >
                             <i class="fa-solid fa-code"></i>
                         </a></td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td class="numero">4</td>
-                    <td class="enunciado">Mostrar en tu página index la fecha y hora actual formateada en castellano. (Utilizar cuando sea posible la clase DateTime)</td>
-                    <td><a href="./codigoPHP/ejercicio03.php" >
+                    <td class="enunciado">Formulario de búsqueda de departamentos por descripción (por una parte del campo
+                        DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).</td>
+                    <td><a href="./codigoPHP/ejercicio04.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo03.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo04.php" >
                             <i class="fa-solid fa-code"></i>
                         </a></td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td class="numero">5</td>
-                    <td class="enunciado">Mostrar en tu página index la fecha y hora actual en Oporto formateada en portugués</td>
-                    <td><a href="./codigoPHP/ejercicio04.php" >
+                    <td class="enunciado">Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
+insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
+</td>
+<!--                    <td><a href="./codigoPHP/ejercicio04.php" >
                             <i class="fa-solid fa-play"></i>
                         </a></td>
                     <td><a href="./mostrarcodigo/mostrarcodigo04.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>
+                        </a></td>-->
                 </tr>
                 <tr>
                     <td class="numero">6</td>
                     <td class="enunciado">Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)
                     </td>
-                    <td><a href="./codigoPHP/ejercicio05.php" >
+<!--                    <td><a href="./codigoPHP/ejercicio05.php" >
                             <i class="fa-solid fa-play"></i>
                         </a></td>
                     <td><a href="./mostrarcodigo/mostrarcodigo05.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>
+                        </a></td>-->
                 </tr>
                 <tr>
                     <td class="numero">7</td>
                     <td class="enunciado">Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</td>
-                    <td><a href="./codigoPHP/ejercicio06.php" >
+<!--                    <td><a href="./codigoPHP/ejercicio06.php" >
                             <i class="fa-solid fa-play"></i>
                         </a></td>
                     <td><a href="./mostrarcodigo/mostrarcodigo06.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>
+                        </a></td>-->
                 </tr>
                 <tr>
                     <td class="numero">8</td>
                     <td class="enunciado">Mostrar el nombre del fichero que se está ejecutando.
                     </td>
-                    <td><a href="./codigoPHP/ejercicio07.php" >
+<!--                    <td><a href="./codigoPHP/ejercicio07.php" >
                             <i class="fa-solid fa-play"></i>
                         </a></td>
                     <td><a href="./mostrarcodigo/mostrarcodigo07.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>
+                        </a></td>-->
                 </tr>
             </table>
         </main>
