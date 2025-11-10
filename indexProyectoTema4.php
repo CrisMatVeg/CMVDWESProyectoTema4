@@ -202,14 +202,15 @@
                 <tr>
                     <td class="numero">5</td>
                     <td class="enunciado">Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
-insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
-</td>
-<!--                    <td><a href="./codigoPHP/ejercicio04.php" >
+                        insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
+                    </td><td><a href="./codigoPHP/ejercicio05.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo04.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo05.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>-->
+                        </a></td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td class="numero">6</td>
