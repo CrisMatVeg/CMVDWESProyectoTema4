@@ -214,14 +214,16 @@
                 </tr>
                 <tr>
                     <td class="numero">6</td>
-                    <td class="enunciado">Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)
-                    </td>
-<!--                    <td><a href="./codigoPHP/ejercicio05.php" >
+                    <td class="enunciado">Pagina web que cargue registros en la tabla Departamento desde un array departamentosnuevos
+utilizando una consulta preparada.
+                    </td><td><a href="./codigoPHP/ejercicio05.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo05.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo05.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>-->
+                        </a></td>
+                    <td>
+                    </td>
                 </tr>
                 <tr>
                     <td class="numero">7</td>
