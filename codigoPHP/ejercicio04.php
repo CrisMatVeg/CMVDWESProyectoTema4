@@ -120,6 +120,9 @@
 
             try {
                 echo '<h3>RESULTADO DE BUSQUEDA: </h3>';
+
+//=======================================================     CONSULTA NORMAL    ============================================================
+
                 if (empty($aRespuestas['descripcion'])) {
                     $sql = $miDB->query("SELECT * FROM T02_Departamento")->fetchAll(PDO::FETCH_OBJ);
                 } else {
@@ -127,8 +130,32 @@
                 }
                 echo '<table>';
                 echo '<tr id="titulotabla"><td>Codigo de Departamento</td><td>Descripción</td><td>Fecha de Creación</td><td>Volumen de Negocio</td><td>Fecha de Baja</td></tr>';
+                
+//======================================================     CONSULTA PREPARADA   ============================================================  
+            /* 
+                if (empty($aRespuestas['descripcion'])) {
+                    $consulta = $miDB->prepare("SELECT * FROM T02_Departamento");
+                    $consulta->execute();
+                    $sql = $consulta->fetchAll(PDO::FETCH_OBJ);
+                } else {
+                    $consulta = $miDB->prepare("
+                        SELECT *
+                        FROM T02_Departamento
+                        WHERE T02_DescDepartamento LIKE :descripcion
+                    ");
 
-// Con fetchAll() uso foreach() porque devuelve un array con todas las filas
+                    $param = "%" . $descripcion . "%";
+                    $consulta->bindValue(':descripcion', $param);
+
+                    $consulta->execute();
+                    $sql = $consulta->fetchAll(PDO::FETCH_OBJ);
+                }   
+                echo '<table>';
+                echo '<tr id="titulotabla"><td>Codigo de Departamento</td><td>Descripción</td><td>Fecha de Creación</td><td>Volumen de Negocio</td><td>Fecha de Baja</td></tr>'; 
+            */     
+//============================================================================================================================================     
+
+                // Con fetchAll() uso foreach() porque devuelve un array con todas las filas
                 foreach ($sql as $registro) {
                     echo '<tr>';
                     foreach (get_object_vars($registro) as $campo => $valor) {
@@ -141,18 +168,19 @@
                     echo "</tr>";
                 }
 
-// Con fetch() usaría while() porque devuelve una unica fila y hay que recorrer todas las filas
-//                while ($registro = $sql->fetch(PDO::FETCH_OBJ)) {
-//                    echo "<tr>";
-//                    foreach (get_object_vars($registro) as $campo => $valor) {
-//                        if (!is_null($valor)) {
-//                            echo "<td>$valor</td>";
-//                        } else {
-//                            echo "<td>$campo: No Determinado</td>";
-//                        }
-//                    }
-//                    echo "</tr>";
-//                }
+                // Con fetch() usaría while() porque devuelve una unica fila y hay que recorrer todas las filas
+                /*
+                    while ($registro = $sql->fetch(PDO::FETCH_OBJ)) {
+                    echo "<tr>";
+                    foreach (get_object_vars($registro) as $campo => $valor) {
+                        if (!is_null($valor)) {
+                            echo "<td>$valor</td>";
+                        } else {
+                            echo "<td>$campo: No Determinado</td>";
+                        }
+                    }
+                    echo "</tr>";
+                } */
 
                 echo '</table>';
             } catch (PDOException $miExceptionPDO) {

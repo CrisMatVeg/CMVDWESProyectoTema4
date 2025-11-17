@@ -1,0 +1,10 @@
+<departamentos>
+    <departamento>
+        <codigo>MUS</codigo>
+        <descripcion>Departamento de Música</descripcion>
+    </departamento>
+    <departamento>
+        <codigo>PLA</codigo>
+        <descripcion>Departamento de Plástica</descripcion>
+    </departamento>
+</departamentos>
