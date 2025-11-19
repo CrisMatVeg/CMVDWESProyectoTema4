@@ -34,11 +34,7 @@
         /*  @author Cristian Mateos Vega
          *  @since 13/11/2025
          */
-        define("HOST", "10.199.8.248");
-        define("DBNAME", "DBCMVDWESProyectoTema4");
-        define("USERNAME", "userCMVDWESProyectoTema4");
-        define("PASSWORD", "paso");
-        define("DSN", "mysql:host=" . HOST . "; dbname=" . DBNAME);
+        require_once '../config/confDBPDO.php';
         $codigoDepartamento=null;
         $departamentosnuevos = array(
             array(":T02_CodDepartamento" => "DDD", ":T02_DescDepartamento" => "Departamento de DDD", ":T02_VolumenDeNegocio" => 154.24),

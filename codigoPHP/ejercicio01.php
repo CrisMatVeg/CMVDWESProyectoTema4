@@ -12,11 +12,8 @@
         /*  @author Cristian Mateos Vega
          *  @since 03/11/2025
          */
-        define("HOST", "10.199.8.248");
-        define("DBNAME", "DBCMVDWESProyectoTema4");
-        define("USERNAME", "userCMVDWESProyectoTema4");
-        define("PASSWORD", "paso");
-        define("DSN", "mysql:host=" . HOST . "; dbname=" . DBNAME);
+        require_once '../config/confDBPDO.php';
+        
         $aAttributes = array('ATTR_AUTOCOMMIT', 'ATTR_CASE', 'ATTR_CLIENT_VERSION', 'ATTR_CONNECTION_STATUS', 'ATTR_DRIVER_NAME', 'ATTR_ERRMODE', 'ATTR_ORACLE_NULLS', 'ATTR_PERSISTENT', 'ATTR_SERVER_INFO', 'ATTR_SERVER_VERSION', 'ATTR_DEFAULT_FETCH_MODE');
 
         echo '<h3>Conexión a BBDD correctamente: </h3>';

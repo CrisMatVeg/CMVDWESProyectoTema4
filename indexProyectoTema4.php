@@ -227,7 +227,9 @@ utilizando una consulta preparada.
                 </tr>
                 <tr>
                     <td class="numero">7</td>
-                    <td class="enunciado">Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</td>
+                    <td class="enunciado">Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
+directorio .../tmp/ del servidor.
 <!--                    <td><a href="./codigoPHP/ejercicio06.php" >
                             <i class="fa-solid fa-play"></i>
                         </a></td>
@@ -237,14 +239,17 @@ utilizando una consulta preparada.
                 </tr>
                 <tr>
                     <td class="numero">8</td>
-                    <td class="enunciado">Mostrar el nombre del fichero que se está ejecutando.
+                    <td class="enunciado">Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+encuentra en el directorio .../tmp/ del servidor
                     </td>
-<!--                    <td><a href="./codigoPHP/ejercicio07.php" >
+                    </td><td><a href="./codigoPHP/ejercicio08.php" >
                             <i class="fa-solid fa-play"></i>
-                        </a></td>
-                    <td><a href="./mostrarcodigo/mostrarcodigo07.php" >
+                        </a>
+                        <a href="./mostrarcodigo/mostrarcodigo08.php" >
                             <i class="fa-solid fa-code"></i>
-                        </a></td>-->
+                        </a></td>
+                    <td>
                 </tr>
             </table>
         </main>

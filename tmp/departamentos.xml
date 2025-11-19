@@ -1,10 +1,51 @@
+<?xml version="1.0"?>
 <departamentos>
-    <departamento>
-        <codigo>MUS</codigo>
-        <descripcion>Departamento de Música</descripcion>
-    </departamento>
-    <departamento>
-        <codigo>PLA</codigo>
-        <descripcion>Departamento de Plástica</descripcion>
-    </departamento>
+  <departamento>
+    <codigo>AUT</codigo>
+    <descripcion>Departamento de automocion.</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>BIO</codigo>
+    <descripcion>depto biologia</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>DDD</codigo>
+    <descripcion>Departamento de DDD</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>EEE</codigo>
+    <descripcion>Departamento de EEE</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>ELE</codigo>
+    <descripcion>Departamento de electricidad.</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>FFF</codigo>
+    <descripcion>Departamento de FFF</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>INF</codigo>
+    <descripcion>Departamento de informatica.</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>ING</codigo>
+    <descripcion>Departamento de ingles.</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>MAT</codigo>
+    <descripcion>Departamento de matematicas.</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>OAS</codigo>
+    <descripcion>Departamento de Tecnolog&#xED;a</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>OIS</codigo>
+    <descripcion>Departamento de M&#xFA;sica</descripcion>
+  </departamento>
+  <departamento>
+    <codigo>OOS</codigo>
+    <descripcion>Departamento de Plastica</descripcion>
+  </departamento>
 </departamentos>

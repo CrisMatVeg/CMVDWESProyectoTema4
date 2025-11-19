@@ -75,11 +75,7 @@
         $aRespuestas = [
             'descripcion' => '',
         ];
-        define("HOST", "10.199.8.248");
-        define("DBNAME", "DBCMVDWESProyectoTema4");
-        define("USERNAME", "userCMVDWESProyectoTema4");
-        define("PASSWORD", "paso");
-        define("DSN", "mysql:host=" . HOST . "; dbname=" . DBNAME);
+        require_once '../config/confDBPDO.php';
         $descripcion = null;
         $sql = null;
         $miDB = new PDO(DSN, USERNAME, PASSWORD);

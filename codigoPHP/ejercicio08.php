@@ -32,35 +32,39 @@
     <body>
     <?php
         // Conexión
-        $conexion = new PDO(
-            "mysql:host=localhost;dbname=DBCMVDWESProyectoTema4;charset=utf8",
-            "userCMVDWESProyectoTema4",
-            "paso"
-        );
+        require_once '../config/confDBPDO.php';
+        $miDB = new PDO(DSN, USERNAME, PASSWORD);
 
         // Sacar datos de la tabla
-        $stmt = $conexion->query("SELECT T02_CodDepartamento, T02_DescDepartamento FROM T02_Departamento");
-        $departamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $sql = $miDB->query("SELECT T02_CodDepartamento, T02_DescDepartamento FROM T02_Departamento");
+        $departamentos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-        // Crear escritor XML
-        $xml = new XMLWriter();
-        $xml->openURI('/tmp/departamento.xml');
-        $xml->startDocument('1.0', 'UTF-8');
-        $xml->startElement('departamentos');
+        $dom = new DOMDocument();
+        $dom->formatOutput = true;
 
+        // Nodo raíz
+        $root = $dom->createElement("departamentos");
+        $dom->appendChild($root);
+
+        // Crear nodos
         foreach ($departamentos as $dep) {
-            $xml->startElement('departamento');
+            $nodoDep = $dom->createElement("departamento");
 
-            $xml->writeElement('codigo', $dep["T02_CodDepartamento"]);
-            $xml->writeElement('descripcion', $dep["T02_DescDepartamento"]);
+            $nodoCod = $dom->createElement("codigo", $dep["T02_CodDepartamento"]);
+            $nodoDesc   = $dom->createElement("descripcion", $dep["T02_DescDepartamento"]);
 
-            $xml->endElement();
+            $nodoDep->appendChild($nodoCod);
+            $nodoDep->appendChild($nodoDesc);
+
+            $root->appendChild($nodoDep);
         }
-
-        $xml->endElement(); // departamentos
-        $xml->endDocument();
-
-        echo "Exportación realizada correctamente.";
+        // Guardar archivo
+        $rutaSalida = "../tmp/departamentos.xml";
+        $dom->save($rutaSalida);
+        echo "<h1>Contenido del archivo</h1>";
+        echo "<pre>";
+        echo htmlspecialchars(file_get_contents("../tmp/departamentos.xml"));
+        echo "</pre>";
     ?>
     </body>
 

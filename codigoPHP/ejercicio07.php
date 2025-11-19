@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejercicio 07</title>
+        <title>Ejercicio 08</title>
         <style>
             * {
                 font-family: sans-serif;
@@ -31,34 +31,40 @@
 
     <body>
     <?php
-        // Conexión a la base de datos
-        $conexion = new PDO(
-            "mysql:host=localhost;dbname=DBCMVDWESProyectoTema4;charset=utf8",
-            "userCMVDWESProyectoTema4",
-            "paso"
-        );
+        // Conexión
+        require_once '../config/confDBPDO.php';
+        $miDB = new PDO(DSN, USERNAME, PASSWORD);
 
-        $ruta = "/tmp/departamentos.xml";
+        // Sacar datos de la tabla
+        $stmt = $miDB->query("SELECT T02_CodDepartamento, T02_DescDepartamento FROM T02_Departamento");
+        $departamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Cargar XML
-        $xml = simplexml_load_file($ruta);
+        $dom = new DOMDocument();
+        $dom->formatOutput = true;
 
-        foreach ($xml->departamento as $dep) {
-            $codigo = (string)$dep->codigo;
-            $descripcion = (string)$dep->descripcion;
+        // Nodo raíz
+        $root = $dom->createElement("departamentos");
+        $dom->appendChild($root);
 
-            $sql = "INSERT INTO T02_Departamento
-                    (T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio)
-                    VALUES (:cod, :desc, NOW(), 0)";
+        // Crear nodos
+        foreach ($departamentos as $dep) {
+            $nodoDep = $dom->createElement("departamento");
 
-            $stmt = $conexion->prepare($sql);
-            $stmt->execute([
-                ":cod" => $codigo,
-                ":desc" => $descripcion
-            ]);
+            $nodoCodigo = $dom->createElement("codigo", $dep["T02_CodDepartamento"]);
+            $nodoDesc   = $dom->createElement("descripcion", $dep["T02_DescDepartamento"]);
+
+            $nodoDep->appendChild($nodoCodigo);
+            $nodoDep->appendChild($nodoDesc);
+
+            $root->appendChild($nodoDep);
         }
-
-        echo "Importación realizada correctamente.";
+        // Guardar archivo
+        $rutaSalida = "../tmp/departamentos.xml";
+        $dom->save($rutaSalida);
+        echo "<h1>Contenido del archivo</h1>";
+        echo "<pre>";
+        echo htmlspecialchars(file_get_contents("../tmp/departamentos.xml"));
+        echo "</pre>";
     ?>
     </body>
 

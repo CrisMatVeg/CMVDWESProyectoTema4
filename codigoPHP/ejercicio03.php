@@ -66,14 +66,10 @@
         /*  @author Cristian Mateos Vega
          *  @since 10/11/2025
          */
+        require_once '../config/confDBPDO.php';
         require_once '../core/231018libreriaValidacion.php';
 //Inicialización de variables
         $entradaOK = true;
-        define("HOST", "10.199.8.248");
-        define("DBNAME", "DBCMVDWESProyectoTema4");
-        define("USERNAME", "userCMVDWESProyectoTema4");
-        define("PASSWORD", "paso");
-        define("DSN", "mysql:host=" . HOST . "; dbname=" . DBNAME);
         $aErrores = [
             'codigo' => '',
             'descripcion' => '',
@@ -86,9 +82,7 @@
         ];
         $codigo = null;
         $miDB = new PDO(DSN, USERNAME, PASSWORD);
-        $sql = "INSERT INTO `T02_Departamento` 
-        (`T02_CodDepartamento`, `T02_DescDepartamento`, `T02_FechaCreacionDepartamento`, `T02_VolumenDeNegocio`, `T02_FechaBajaDepartamento`) 
-        VALUES ('{$aRespuestas['codigo']}','{$aRespuestas['descripcion']}',NOW(),{$aRespuestas['volumenDeNegocio']},NULL)";
+        $sql = null;
         $sql2 = null;
         $codigo = null;
 // Comprobar si el formulario se ha enviado
@@ -143,6 +137,10 @@
             }
 
             $codigo = addslashes($aRespuestas['codigo']); //esta función permite que simbolos especiales en cadenas como las comillas no sean tratados con su efecto a la hora de tratar la cadena dada, para evitar, por ejemplo, que la cadena se parta debido a estos simbolos y evitar errores
+
+            $sql = "INSERT INTO `T02_Departamento` 
+            (`T02_CodDepartamento`, `T02_DescDepartamento`, `T02_FechaCreacionDepartamento`, `T02_VolumenDeNegocio`, `T02_FechaBajaDepartamento`) 
+            VALUES ('{$aRespuestas['codigo']}','{$aRespuestas['descripcion']}',NOW(),'{$aRespuestas['volumenDeNegocio']}',NULL)";
 
             //Consulta para obtener el codigo del departamento insertado para validar si existe o no
             $sql2 = $miDB->query("SELECT T02_CodDepartamento FROM T02_Departamento WHERE T02_CodDepartamento = '$codigo'")->fetchAll(PDO::FETCH_OBJ);

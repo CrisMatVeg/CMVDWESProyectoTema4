@@ -34,11 +34,7 @@
         /*  @author Cristian Mateos Vega
          *  @since 03/11/2025
          */
-        define("HOST", "10.199.8.248");
-        define("DBNAME", "DBCMVDWESProyectoTema4");
-        define("USERNAME", "userCMVDWESProyectoTema4");
-        define("PASSWORD", "paso");
-        define("DSN", "mysql:host=" . HOST . "; dbname=" . DBNAME);
+        require_once '../config/confDBPDO.php';
         try {
             $miDB = new PDO(DSN, USERNAME, PASSWORD);
             // Consulta para sacar todos los registros de la tabla de departamentos
