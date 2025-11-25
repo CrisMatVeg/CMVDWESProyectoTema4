@@ -186,6 +186,23 @@
             } finally {
                 unset($miDB);
             }
+        }else{
+            echo '<h3>CONTENIDO DE LA TABLA: </h3>';
+            $sql = $miDB->query("SELECT * FROM T02_Departamento")->fetchAll(PDO::FETCH_OBJ);
+            echo '<table>';
+            echo '<tr id="titulotabla"><td>Codigo de Departamento</td><td>Descripción</td><td>Fecha de Creación</td><td>Volumen de Negocio</td><td>Fecha de Baja</td></tr>';
+            foreach ($sql as $registro) {
+                echo '<tr>';
+                foreach (get_object_vars($registro) as $campo => $valor) {
+                    if (!is_null($valor)) {
+                        echo "<td>$valor</td>";
+                    } else {
+                        echo "<td>No Determinado</td>";
+                    }
+                }
+                echo "</tr>";
+            }
+            echo '</table>';
         }
         ?>
     </body>

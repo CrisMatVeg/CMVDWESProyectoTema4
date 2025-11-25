@@ -99,10 +99,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="./codigoPHP/ejercicio00.php" >
-                            <i class="fa-solid fa-play"></i>
-                        </a>
-                        <a href="./mostrarcodigo/mostrarcodigoCrear.php" >
+                        <a href="./mostrarcodigo/mostrarcodigoCrearEE.php" >
                             <i class="fa-solid fa-code"></i>
                         </a>
                     </td>
@@ -115,12 +112,6 @@
                         </a>
                     </td>
                     <td>
-                        <a href="./codigoPHP/ejercicio00.php" >
-                            <i class="fa-solid fa-play"></i>
-                        </a>
-                        <a href="./mostrarcodigo/mostrarcodigoCarga.php" >
-                            <i class="fa-solid fa-code"></i>
-                        </a>
                     </td>
                 </tr>
                 <tr>
@@ -131,10 +122,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="./codigoPHP/ejercicio00.php" >
-                            <i class="fa-solid fa-play"></i>
-                        </a>
-                        <a href="./mostrarcodigo/mostrarcodigoBorrar.php" >
+                        <a href="./mostrarcodigo/mostrarcodigoBorrarEE.php" >
                             <i class="fa-solid fa-code"></i>
                         </a>
                     </td>
